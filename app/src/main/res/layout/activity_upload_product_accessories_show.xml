@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Upload_Product_Accessories_Show"
+    android:orientation="vertical"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:background="#000">
+
+
+        <SearchView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seachviewaccess"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@color/white"
+            />
+
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Products"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:fontFamily="serif"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginStart="20dp"/>-->
+
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/baseline_home_24"
+            android:onClick="aceescustomerhome" />
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#FFFF">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/showaccessoriesuploadprdtrecyler"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+<!--    .Upload_Product_Accessories_Show-->
+
+<!--    seachviewaccess-->
+
+<!--    customerhome-->
+
+<!--    showaccessoriesuploadprdtrecyler-->

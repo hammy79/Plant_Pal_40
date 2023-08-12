@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "243201153422",
+    "project_id": "plant-pal-4-0",
+    "storage_bucket": "plant-pal-4-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243201153422:android:5decd694bf7e0d11a2acdf",
+        "android_client_info": {
+          "package_name": "com.hammad.plant_pal_40"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243201153422-lqi771hfg29ufqbj3b4ucrn1vmiatlmu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZQN2mpqGYvAdv3hJowcoMimNoeyjXTq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243201153422-lqi771hfg29ufqbj3b4ucrn1vmiatlmu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
