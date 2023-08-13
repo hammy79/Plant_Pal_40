@@ -81,10 +81,12 @@ public class Upload_Accessories_Page extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (imageUri !=null){
+                    dialog.show();
                     uploadToFirebase(imageUri,view);
                 }else {
 
                     Toast.makeText(Upload_Accessories_Page.this, "Please Select Images", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
                 }
             }
         });
@@ -98,7 +100,7 @@ public class Upload_Accessories_Page extends AppCompatActivity {
         String SA_desc_instruction=A_desc.getText().toString();
         String SA_stock=A_stock.getText().toString();
         String SA_price=A_price.getText().toString();
-        dialog.show();
+
 
 
         if (SA_name.equals("")){
@@ -131,7 +133,6 @@ public class Upload_Accessories_Page extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), Admin_Home_Page.class));
             Snackbar.make(view,"Product Uploaded",Snackbar.LENGTH_SHORT).show();
             ClearData();
-            dialog.dismiss();
 
         }
 

@@ -1,18 +1,27 @@
 package com.hammad.plant_pal_40;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.EventListener;
 
 public class Customer_Details extends AppCompatActivity {
 
@@ -22,12 +31,14 @@ public class Customer_Details extends AppCompatActivity {
 
 
     DatabaseReference db;
+    FirebaseFirestore db2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
-        Inilization();
+        //   Inilization();
+        display_data();
     }
 
     private void Inilization() {
@@ -38,7 +49,6 @@ public class Customer_Details extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.showuserdetailrecyler);
         recyclerView.setHasFixedSize(true);
-
 
 
         db.addValueEventListener(new ValueEventListener() {
@@ -66,4 +76,23 @@ public class Customer_Details extends AppCompatActivity {
 
 
     }
+    private void display_data(){
+
+        db2 = FirebaseFirestore.getInstance();
+
+        db2.collection("User_Customer_Created").whereEqualTo("userId","User1691781013182").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+
+                }
+            }
+        });
+
+
+    }
+
+
 }
+
+

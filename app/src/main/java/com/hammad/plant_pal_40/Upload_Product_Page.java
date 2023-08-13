@@ -58,9 +58,7 @@ public class Upload_Product_Page extends AppCompatActivity {
         plant_growth_habits = findViewById(R.id.uploadplantgrowthhabits);
         plant_stock = findViewById(R.id.uploadplantstock);
         plant_price = findViewById(R.id.uploadplantprice);
-        dialog = new ProgressDialog(this);
-        dialog.setTitle("Upload Product");
-        dialog.setMessage("Please wait Your Product is Uploading...");
+
 
         imageView = findViewById(R.id.admincustomerproductimageUplaod);
         button = findViewById(R.id.btnadminuploadadd);
@@ -68,6 +66,10 @@ public class Upload_Product_Page extends AppCompatActivity {
         db= FirebaseDatabase.getInstance().getReference().child("Add_upload_Product");
         firebaseFirestore=FirebaseFirestore.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference().child("Images_upload_product");
+
+        dialog = new ProgressDialog(this);
+        dialog.setTitle("Upload Product");
+        dialog.setMessage("Please wait Your Product is Uploading...");
 
 
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +85,7 @@ public class Upload_Product_Page extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (imageUri !=null){
+                    dialog.show();
                     uploadToFirebase(imageUri,view);
                 }else {
 
@@ -102,7 +105,6 @@ public class Upload_Product_Page extends AppCompatActivity {
         String Splant_growth_habits=plant_growth_habits.getText().toString();
         String Splant_stock=plant_stock.getText().toString();
         String Splant_price=plant_price.getText().toString();
-        dialog.show();
 
 
 
@@ -145,7 +147,6 @@ public class Upload_Product_Page extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), Admin_Home_Page.class));
             Snackbar.make(view,"Product Uploaded",Snackbar.LENGTH_SHORT).show();
             ClearData();
-            dialog.dismiss();
         }
 
     }

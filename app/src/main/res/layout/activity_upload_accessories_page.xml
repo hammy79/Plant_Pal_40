@@ -119,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Stock"
-                android:inputType="number"
+                android:inputType="text"
                 android:id="@+id/accessoriesuploadstock"
                 />
         </com.google.android.material.textfield.TextInputLayout>

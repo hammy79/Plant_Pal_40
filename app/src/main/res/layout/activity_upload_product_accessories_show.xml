@@ -30,16 +30,7 @@
             />
 
 
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Products"-->
-        <!--            android:textSize="20sp"-->
-        <!--            android:fontFamily="serif"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textStyle="bold"-->
-        <!--            android:layout_gravity="center"-->
-        <!--            android:layout_marginStart="20dp"/>-->
+
 
 
 
@@ -78,11 +69,3 @@
 
 </LinearLayout>
 
-
-<!--    .Upload_Product_Accessories_Show-->
-
-<!--    seachviewaccess-->
-
-<!--    customerhome-->
-
-<!--    showaccessoriesuploadprdtrecyler-->

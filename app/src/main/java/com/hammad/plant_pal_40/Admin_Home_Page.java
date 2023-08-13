@@ -28,7 +28,11 @@ public class Admin_Home_Page extends AppCompatActivity {
 
     }
 
-    public void showproductadmin(View view) {
-        startActivity(new Intent(getApplicationContext(),Upload_Show_Product_Page.class));
+//    public void showproductadmin(View view) {
+//        startActivity(new Intent(getApplicationContext(),Upload_Show_Product_Page.class));
+//    }
+
+    public void showproductaccessoriesadmin(View view) {
+        startActivity(new Intent(getApplicationContext(),Upload_Product_Accessories_Show.class));
     }
 }

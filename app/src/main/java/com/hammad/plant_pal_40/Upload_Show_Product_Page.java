@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Upload_Show_Product_Page extends AppCompatActivity {
 
@@ -95,12 +96,12 @@ public class Upload_Show_Product_Page extends AppCompatActivity {
         ArrayList<Upload_Products_Module> fliterlist = new ArrayList<>();
         for (Upload_Products_Module module : arrayList){
 
-//            module.getPlant_name().toLowerCase(Locale.ROOT);
+            module.getPlant_name().toLowerCase(Locale.ROOT);
 
-            if(module.getPlant_name().contains(newText))
-            {
-                fliterlist.add(module);
-            }
+//            if(module.getPlant_name().contains(newText) || module.getPlant_name().toUpperCase(Locale.ROOT);
+//            {
+//                fliterlist.add(module);
+//            }
         }
 
         if(fliterlist.isEmpty())

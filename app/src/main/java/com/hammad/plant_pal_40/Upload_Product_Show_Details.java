@@ -109,15 +109,6 @@ public class Upload_Product_Show_Details extends AppCompatActivity {
                 String stotal = String.valueOf(total);
                 priceaddtocart.setText(stotal);
 
-
-
-
-
-
-
-
-
-
             }
         });
 
@@ -150,21 +141,3 @@ public class Upload_Product_Show_Details extends AppCompatActivity {
 
 }
 
-//
-//    String result = String.valueOf(value);
-//                showvalue.setText(result);
-//                        int total = totalprice*value;
-//                        cardView.setVisibility(View.VISIBLE);
-//                        String stotal = String.valueOf(total);
-//                        priceaddtocart.setText( "Rs " +stotal)
-
-
-
-//    String result = String.valueOf(value);
-//                showvalue.setText(result);
-//                quantityaddtocart.setText(result);
-//                        int total = totalprice*value;
-//                        cardView.setVisibility(View.VISIBLE);
-//
-//                        String stotal = String.valueOf(total);
-//                        priceaddtocart.setText( "Rs " +stotal);

@@ -31,6 +31,7 @@ public class FeedBack extends AppCompatActivity {
     EditText Message;
     Button BtnFeedback;
     FirebaseFirestore firebaseFirestore;
+    DatabaseReference db;
 
     FeedBackModel feedBackModel;
 
@@ -75,6 +76,7 @@ public class FeedBack extends AppCompatActivity {
     private void addDatatoFirebase(String feedbacktype, String messag) {
         users.put("feedbacktype",feedbacktype);
         users.put("message",messag);
+
         firebaseFirestore.collection("feedbackform")
                 .add(users)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
