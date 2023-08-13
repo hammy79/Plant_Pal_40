@@ -23,7 +23,6 @@
         <activity
             android:name=".Forget_Password_Customer"
             android:exported="false" />
-
         <activity
             android:name=".Upload_Product_Accessories_Show_Details"
             android:exported="false" />

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -143,11 +144,21 @@ public class Registration_Page extends AppCompatActivity {
                     String id = "User" + new Date().getTime();
 
 
+                    SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+                    SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+
+                    myEdit.putString("UserID", id);
+                    myEdit.putString("UserEmail", Semail);
+                    myEdit.putString("UserName", Susername);
+                    myEdit.putString("UserFUllName", Sfullname);
+
 
                     if (task.isSuccessful()) {
                         Customer_Module obj = new Customer_Module(id,Sfullname,Susername, Semail,Saddress, Sage, Sgender, Spassword, Sconfirmpassword);
                         db.child(id).setValue(obj);
                         documentReference.set(obj);
+                        myEdit.commit();
                         Toast.makeText(getApplicationContext(), "Customer Account created", Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         dialog.dismiss();

@@ -459,6 +459,7 @@
                                 android:backgroundTint="@color/white"
                                 android:textColor="@color/black"
                                 android:id="@+id/addtocartbtnprdt"
+                                android:onClick="btnAddToCard"
                                 />
 
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -87,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
             Mauth.signInWithEmailAndPassword(Semail,Spassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
+
+                    SharedPreferences sh = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+                    String s1 = sh.getString("UserID", "");
+                    System.out.println("my user id is : "+s1);
 
                     if (task.isSuccessful()){
                         Toast.makeText(MainActivity.this, "Welcome Home", Toast.LENGTH_LONG).show();
